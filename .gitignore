@@ -1,1 +1,73 @@
+# all gitignore files should be alphabetically sorted by:
+# • category [which is contained as a comment header]
+# • rule [which is contained inbetween comment headers]
+# ------------------------------------
+# this file is intended to:
+# • handle the specific rules for the monorepo,
+# • and catch-all in case sub-level .gitignore files do not
+# ------------------------------------
+# this is a work in progress
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# build
+**/dist
+**/build
+cypress/videos
+cypress/downloads
+cypress/screenshots
+
+# dependencies
+**/node_modules
+**/.pnp
+.pnp.js
+
+# logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# os
+.DS_Store
+*.pem
+
+# next.js
+.next/
+out/
+build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# turbo
 .turbo
+
+# dotenv
+.env
+.idea/
+
+# vscode
+*.code-workspace

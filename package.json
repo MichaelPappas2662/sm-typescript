@@ -1,0 +1,29 @@
+{
+  "name": "sm-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "apps/*",
+    "packages/*/*"
+  ],
+  "scripts": {
+    "prepare": "node ./scripts/skip-hooks.js || husky install",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "tsc": "turbo run tsc --parallel"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "2.8.1",
+    "turbo": "^1.8.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@7.19.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
